@@ -1,0 +1,18 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: todolist-redis
+  cache:
+    type: redis
+  redis:
+    cluster:
+      nodes:
+        - 127.0.0.1:30001
+        - 127.0.0.1:30002
+        - 127.0.0.1:30003
+        - 127.0.0.1:30004
+        - 127.0.0.1:30005
+        - 127.0.0.1:30006
+      maxRedirects: 2
