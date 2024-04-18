@@ -66,7 +66,6 @@ public class RedisConfig {
 
         JedisCluster jedisCluster = new JedisCluster(jedisClusterNodes, jedisClientConfig);
 
-
         return JedisBasedProxyManager.builderFor(jedisCluster)
                 .withExpirationStrategy(ExpirationAfterWriteStrategy.basedOnTimeForRefillingBucketUpToMax(ofSeconds(10)))
                 .withKeyMapper(Mapper.STRING)
